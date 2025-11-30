@@ -1,0 +1,129 @@
+/* External CSS for Seeds of Survival Website */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #faf7ef;
+  color: #2a2a2a;
+}
+
+/* LAYOUT: SIDEBAR + HEADER + CONTENT */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR NAV */
+.sidebar {
+  width: 200px;
+  background-color: #eef6ff;
+  padding: 20px 10px;
+  border-right: 4px solid #98c1ff;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #004b8d;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.sidebar a:hover {
+  color: #0077cc;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: #e8ffe8;
+  border-bottom: 4px solid #7fdc7f;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header img.logo {
+  height: 50px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #006400;
+}
+
+/* CONTENT AREA */
+.content {
+  flex: 1;
+  padding: 30px;
+  background-color: #fffef6;
+}
+
+.content h2 {
+  margin-bottom: 15px;
+  color: #2f6f31;
+}
+
+.content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #0077cc;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #005fa3;
+}
+
+/* GRID (used in Articles, Videos, Donate pages, etc.) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 20px;
+  border: 2px solid #d8d8d8;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background-color: #eef6ff;
+  border-top: 3px solid #98c1ff;
+  color: #004b8d;
+}
