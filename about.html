@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Seedsofsurvival-style.css">
+<script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+<title>About - Seeds of Survival</title>
+</head>
+<body>
+<header>
+<img src="logo.png" alt="Seeds of Survival Logo" class="logo">
+<h1>About the Crisis</h1>
+</header>
 
+
+<div style="text-align:center; margin: 20px 0;">
+<canvas id="seedCanvas" width="300" height="200" style="background:#f3f3f3; border-radius:8px;"></canvas>
+</div>
+<script>
+const canvas2 = document.getElementById("seedCanvas");
+const stage2 = new createjs.Stage(canvas2);
+const seed2 = new createjs.Shape();
+seed2.graphics.beginFill("#6b8e23").drawCircle(0, 0, 20);
+seed2.x = 50;
+seed2.y = 100;
+stage2.addChild(seed2);
+createjs.Ticker.framerate = 60;
+createjs.Ticker.addEventListener("tick", tick2);
+let direction2 = 1;
+function tick2() {
+seed2.x += direction2 * 2;
+if (seed2.x > 280 || seed2.x < 20) direction2 *= -1;
+stage2.update();
+}
+</script>
+
+
+<div class="wrapper">
+<nav class="sidebar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="articles.html">Articles</a></li>
+<li><a href="videos.html">Videos</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="campaigning.html">Campaigning</a></li>
+<li><a href="fundraisers.html">Fundraisers</a></li>
+<li><a href="quiz.html">Quiz</a></li>
+<li><a href="volunteering.html">Volunteering</a></li>
+</ul>
+</nav>
+
+
+<main class="content">
+<h2>The Crisis of Crop Diversity</h2>
+<p>Thousands of traditional crops are disappearing...</p>
+<footer>&copy; 2025 Seeds of Survival. All Rights Reserved.</footer>
+</main>
+</div>
+</body>
+</html>
