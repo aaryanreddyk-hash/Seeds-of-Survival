@@ -1,6 +1,241 @@
-<!DOCTYPE html>
-  <html>
-  <head>
-  <title>Seeds of Survival</title>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Endangered Crop Species — Site</title>
+  <style>
+    :root{--accent:#166534;--bg:#f6f8f4;--card:#fff;--muted:#55606a}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:var(--bg);color:#072018}
+    header{background:linear-gradient(90deg,#123e28,#1e6b3d);color:#fff;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand .logo{width:44px;height:44px;border-radius:8px;background:#fff;color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav{display:flex;gap:12px;flex-wrap:wrap}
+    nav a{color:#dff6ea;text-decoration:none;padding:8px 10px;border-radius:8px}
+    nav a.active{background:rgba(255,255,255,0.08)}
+    main{max-width:1100px;margin:22px auto;padding:18px}
+    .page{display:none;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(10,20,10,0.04)}
+    .page.active{display:block}
+    h1{margin-top:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .card{padding:12px;background:linear-gradient(180deg,#fff,#fbfffb);border-radius:10px}
+    .muted{color:var(--muted)}
+    footer{max-width:1100px;margin:20px auto;padding:18px;color:var(--muted);font-size:14px}
+    @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.grid{grid-template-columns:1fr};nav{overflow:auto}}
+    .button{background:var(--accent);color:#fff;padding:10px 12px;border-radius:10px;text-decoration:none;display:inline-block}
+    iframe{border:0;width:100%;height:320px;border-radius:8px}
+  </style>
+</head>
 <body>
-<h1>
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden>EC</div>
+      <div>
+        <div style="font-weight:700">Endangered Crops</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.85)">Protecting crop diversity for food security</div>
+      </div>
+    </div>
+    <nav id="siteNav" aria-label="Main navigation">
+      <a href="#home" data-page="home" class="active">Home</a>
+      <a href="#about" data-page="about">About</a>
+      <a href="#articles" data-page="articles">Articles</a>
+      <a href="#videos" data-page="videos">Videos</a>
+      <a href="#faqs" data-page="faqs">FAQs</a>
+      <a href="#campaign" data-page="campaign">Campaigning</a>
+      <a href="#fundraisers" data-page="fundraisers">Fundraisers</a>
+      <a href="#quiz" data-page="quiz">Quiz</a>
+      <a href="#volunteer" data-page="volunteer">Volunteering</a>
+      <a href="#donate" data-page="donate">Donate</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home -->
+    <section id="home" class="page active" aria-labelledby="homeTitle">
+      <h1 id="homeTitle">Welcome — Protect Crop Diversity</h1>
+      <p class="muted">This site explains the endangerment of crop species, why diversity matters, and how you can help. Use the navigation above to explore the full site.</p>
+      <div style="margin-top:14px;display:grid;grid-template-columns:2fr 1fr;gap:14px">
+        <div class="card">
+          <h2>Overview</h2>
+          <p class="muted">Crop diversity is essential for food security, nutrition, cultural identity, and agricultural resilience. As modern agriculture concentrates on fewer varieties, we lose traits that help crops survive pests, disease, and climate extremes.</p>
+          <p class="muted">Explore the About page to read the core "Who, What, When, Where, Why, and How" in one place, then visit Articles, Videos, and the Quiz to learn more.</p>
+        </div>
+        <div class="card">
+          <h3>Quick links</h3>
+          <ul style="margin:8px 0 0;padding-left:18px">
+            <li><a href="#about" data-page="about">About — who, what, when, where, why, how</a></li>
+            <li><a href="#fundraisers" data-page="fundraisers">Fundraisers & donations</a></li>
+            <li><a href="#volunteer" data-page="volunteer">Volunteering opportunities</a></li>
+            <li><a href="#quiz" data-page="quiz">Take the quiz</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- About: Who, What, When, Where, Why, How -->
+    <section id="about" class="page" aria-labelledby="aboutTitle">
+      <h1 id="aboutTitle">About — Who, What, When, Where, Why & How</h1>
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <h3>Who?</h3>
+          <p class="muted">The endangerment of crop species affects farmers, consumers, indigenous communities, and the global food system as a whole. Everyone who depends on agriculture—now and in the future—is impacted by shrinking crop diversity.</p>
+        </div>
+        <div class="card">
+          <h3>What?</h3>
+          <p class="muted">Many crop species and their wild relatives are becoming endangered due to rapid loss of genetic diversity. Modern agriculture's focus on a narrow set of high-yield varieties pushes locally adapted crops toward extinction, removing valuable traits like disease resistance and drought tolerance.</p>
+        </div>
+        <div class="card">
+          <h3>When?</h3>
+          <p class="muted">This trend began in the mid-20th century with industrial farming and the Green Revolution. It has accelerated in recent decades through climate change, global seed markets, and large-scale monocultures.</p>
+        </div>
+        <div class="card">
+          <h3>Where?</h3>
+          <p class="muted">The problem is global but especially severe in regions rich in traditional agricultural diversity — South Asia, Africa, and Latin America. Wild crop relatives are also threatened in developed regions by habitat loss.</p>
+        </div>
+        <div class="card">
+          <h3>Why?</h3>
+          <p class="muted">Drivers include monoculture farming, climate change, habitat destruction, industrial seed systems, overuse of agrochemicals, and the erosion of indigenous seed-saving knowledge.</p>
+        </div>
+        <div class="card">
+          <h3>How?</h3>
+          <p class="muted">Loss of crop species reduces food security, narrows dietary options, and increases vulnerability to pests, disease, and climate stress. Cultural and economic losses follow, affecting communities and global agriculture.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section id="articles" class="page" aria-labelledby="articlesTitle">
+      <h1 id="articlesTitle">Articles & Reports</h1>
+      <ul>
+        <li><a href="https://www.fao.org/publications/sowpgrfa" target="_blank" rel="noopener">FAO — State of the World's PGRFA</a></li>
+        <li><a href="https://www.croptrust.org/our-work/why-crop-diversity-matters/" target="_blank" rel="noopener">Crop Trust — Why Crop Diversity Matters</a></li>
+        <li><a href="https://www.nationalgeographic.com/environment/article/seed-banks" target="_blank" rel="noopener">National Geographic — Seed Banks</a></li>
+        <li><a href="https://www.cgiar.org/news-events/news/crop-diversity-the-foundation-of-food-security/" target="_blank" rel="noopener">CGIAR — Crop diversity and food security</a></li>
+        <li><a href="https://www.unep.org/news-and-stories/story/biodiversity-loss-threatens-global-food-security" target="_blank" rel="noopener">UNEP — Biodiversity loss threatens food security</a></li>
+        <li><a href="https://www.bioversityinternational.org/safeguarding-agricultural-biodiversity/" target="_blank" rel="noopener">Bioversity International — Safeguarding agricultural biodiversity</a></li>
+        <li><a href="https://www.scientificamerican.com/article/losing-our-seeds/" target="_blank" rel="noopener">Scientific American — Losing our seeds</a></li>
+      </ul>
+    </section>
+
+    <!-- Videos -->
+    <section id="videos" class="page" aria-labelledby="videosTitle">
+      <h1 id="videosTitle">Videos</h1>
+      <div style="display:grid;gap:12px">
+        <div class="card"><iframe src="https://www.youtube.com/embed/Ug5v7kQFfTg" title="Video 1" allowfullscreen></iframe></div>
+        <div class="card"><iframe src="https://www.youtube.com/embed/ibe1k7H4wCk" title="Video 2" allowfullscreen></iframe></div>
+        <div class="card"><iframe src="https://www.youtube.com/embed/MxtxmXS1H6E" title="Video 3" allowfullscreen></iframe></div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs" class="page" aria-labelledby="faqsTitle">
+      <h1 id="faqsTitle">Frequently Asked Questions</h1>
+      <div style="display:grid;gap:10px">
+        <div class="card"><strong>What is the purpose of this website?</strong><p class="muted">To educate about threats to crop species, why diversity matters, and actions people can take.</p></div>
+        <div class="card"><strong>Why are crop species becoming endangered?</strong><p class="muted">Due to monoculture, climate change, habitat loss, industrial seed systems, and the decline of traditional farming practices.</p></div>
+        <div class="card"><strong>Why is crop diversity important?</strong><p class="muted">It provides genetics for resilience — drought tolerance, disease resistance, and adaptability to climate change.</p></div>
+        <div class="card"><strong>Who is affected?</strong><p class="muted">Farmers, consumers, indigenous communities, and future generations.</p></div>
+        <div class="card"><strong>How can individuals help?</strong><p class="muted">Support seed-saving groups, buy local and diverse produce, choose heirloom varieties, donate, and spread awareness.</p></div>
+        <div class="card"><strong>Organizations working on this?</strong><p class="muted">Crop Trust, FAO, CGIAR, Seed Savers Exchange, Bioversity International, and national seed banks.</p></div>
+        <div class="card"><strong>What is a seed bank?</strong><p class="muted">A facility that stores seeds long-term to preserve crop diversity for restoration and research.</p></div>
+        <div class="card"><strong>How serious is the issue?</strong><p class="muted">Very serious—substantial diversity has already been lost and urgent action is needed.</p></div>
+      </div>
+    </section>
+
+    <!-- Campaigning -->
+    <section id="campaign" class="page" aria-labelledby="campaignTitle">
+      <h1 id="campaignTitle">Campaigning Guide</h1>
+      <ol class="muted">
+        <li><strong>Define your goal</strong> — pick a clear, measurable objective.</li>
+        <li><strong>Identify your audience</strong> — farmers, students, consumers, etc.</li>
+        <li><strong>Craft your core message</strong> — headline, short summary, call to action.</li>
+        <li><strong>Build a timeline & roles</strong> — plan stages and responsibilities.</li>
+        <li><strong>Prepare materials</strong> — graphics, emails, flyers, forms.</li>
+        <li><strong>Choose channels & tactics</strong> — social media, email, events, partners.</li>
+        <li><strong>Launch</strong> — release your main post and ask partners to amplify it.</li>
+        <li><strong>Engage & grow momentum</strong> — share updates and host events.</li>
+        <li><strong>Partner outreach</strong> — connect with local orgs and schools.</li>
+        <li><strong>Fundraising tactics</strong> — crowdfunding, matching, incentives.</li>
+        <li><strong>Run events & collect proof</strong> — workshops, seed swaps, photos, stories.</li>
+        <li><strong>Track metrics & iterate</strong> — measure results and improve.</li>
+        <li><strong>Mid-campaign push</strong> — use urgency to re-engage supporters.</li>
+        <li><strong>Close & thank supporters</strong> — summarize results and show appreciation.</li>
+        <li><strong>Post-campaign follow-up</strong> — final reports and next steps.</li>
+      </ol>
+    </section>
+
+    <!-- Fundraisers -->
+    <section id="fundraisers" class="page" aria-labelledby="fundraisersTitle">
+      <h1 id="fundraisersTitle">Fundraisers & Donations</h1>
+      <p class="muted">Support organizations working to conserve crop diversity. Every gift helps protect seeds, support farmers, and fund research.</p>
+      <ul>
+        <li><a href="https://www.croptrust.org/donate" target="_blank" rel="noopener">Crop Trust — Donate</a></li>
+        <li><a href="https://www.seedsavers.org/donate" target="_blank" rel="noopener">Seed Savers Exchange — Donate</a></li>
+        <li><a href="https://www.navdanya.org/support-us" target="_blank" rel="noopener">Navdanya — Support</a></li>
+      </ul>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz" class="page" aria-labelledby="quizTitle">
+      <h1 id="quizTitle">Quiz</h1>
+      <p class="muted">Test your knowledge with this short quiz.</p>
+      <p><a class="button" href="https://docs.google.com/forms/d/1Ymi3mxrwEFUswzukAHmgwEvrvwWlVyrg2U377GK7jGE/edit" target="_blank" rel="noopener">Open Quiz</a></p>
+    </section>
+
+    <!-- Volunteering Opportunities -->
+    <section id="volunteer" class="page" aria-labelledby="volunteerTitle">
+      <h1 id="volunteerTitle">Volunteering Opportunities</h1>
+      <p class="muted">Get hands-on experience by volunteering with organizations working on seed saving, conservation, and sustainable agriculture.</p>
+      <ul>
+        <li><a href="https://www.seedsavers.org/volunteer" target="_blank" rel="noopener">Seed Savers — Volunteer</a></li>
+        <li><a href="https://www.nativeseeds.org/pages/volunteer" target="_blank" rel="noopener">Native Seeds — Volunteer</a></li>
+        <li><a href="https://wwoof.net" target="_blank" rel="noopener">WWOOF — Worldwide organic farm volunteering</a></li>
+      </ul>
+    </section>
+
+    <!-- Donate (support page) -->
+    <section id="donate" class="page" aria-labelledby="donateTitle">
+      <h1 id="donateTitle">Donate & Support</h1>
+      <p class="muted">If you're able, donations directly fund seed banks, farmer partnerships, research, and community programs.</p>
+      <ul>
+        <li><a href="https://www.croptrust.org/donate" target="_blank" rel="noopener">Crop Trust — Donate</a></li>
+        <li><a href="https://www.seedsavers.org/donate" target="_blank" rel="noopener">Seed Savers Exchange — Donate</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <div style="max-width:1100px;margin:0 auto;padding:12px 18px;color:var(--muted);font-size:14px">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div><strong>Endangered Crops</strong><div class="muted">A resource hub to inform and empower action on crop diversity.</div></div>
+        <div class="muted">Resources: FAO · Crop Trust · CGIAR · UNEP</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple single-file multi-page navigation
+    const links = document.querySelectorAll('nav a[data-page]');
+    const pages = document.querySelectorAll('.page');
+    function showPage(id, push=true){
+      pages.forEach(p=>p.classList.remove('active'));
+      links.forEach(l=>l.classList.remove('active'));
+      const el = document.getElementById(id);
+      const link = document.querySelector('nav a[data-page="'+id+'"]');
+      if(el){ el.classList.add('active'); }
+      if(link){ link.classList.add('active'); }
+      if(push){ history.pushState({page:id}, '', '#'+id); }
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+    // attach link handlers
+    links.forEach(a=>a.addEventListener('click', e=>{ e.preventDefault(); showPage(a.dataset.page); }));
+    // handle back/forward
+    window.addEventListener('popstate', (e)=>{ const page = (location.hash||'#home').replace('#','')||'home'; showPage(page,false); });
+    // initial load from hash
+    const initial = (location.hash||'#home').replace('#','')||'home'; if(document.getElementById(initial)) showPage(initial,false);
+  </script>
+</body>
+</html>
