@@ -1,4 +1,33 @@
-/* External CSS for Seeds of Survival Website */
+/* =======================================================
+   Seeds of Survival – Theme CSS
+   Includes all requested colors:
+   Greens: Lawn Green, Lime, Lime Green, Forest Green
+   Sands: Sand Tan, Sand Tan Shadow
+   Night Blues: Night Blue, Night Blue Shadow
+   ======================================================= */
+
+/* ----------------------------------
+   COLOR VARIABLES
+---------------------------------- */
+:root {
+  /* GREEN PALETTE (Topic, Nature, Agriculture) */
+  --lawn-green: #7CFC00;
+  --lime: #00FF00;
+  --lime-green: #32CD32;
+  --forest-green: #228B22;
+
+  /* SAND PALETTE (Wheat, Contrast) */
+  --sand-tan: #e1b382;
+  --sand-tan-shadow: #c89666;
+
+  /* NIGHT BLUE PALETTE (Depth, Serious tone) */
+  --night-blue: #2d545e;
+  --night-blue-shadow: #12343b;
+
+  /* General Text Colors */
+  --text-dark: #1a1a1a;
+  --text-light: #ffffff;
+}
 
 /* RESET */
 * {
@@ -9,22 +38,24 @@
 }
 
 body {
-  background-color: #faf7ef;
-  color: #2a2a2a;
+  background-color: var(--sand-tan);
+  color: var(--night-blue-shadow);
 }
 
-/* LAYOUT: SIDEBAR + HEADER + CONTENT */
+/* WRAPPER LAYOUT */
 .wrapper {
   display: flex;
   min-height: 100vh;
 }
 
-/* SIDEBAR NAV */
+/* ----------------------------------
+   SIDEBAR
+---------------------------------- */
 .sidebar {
   width: 200px;
-  background-color: #eef6ff;
+  background-color: var(--night-blue);
   padding: 20px 10px;
-  border-right: 4px solid #98c1ff;
+  border-right: 4px solid var(--night-blue-shadow);
 }
 
 .sidebar ul {
@@ -37,21 +68,23 @@ body {
 
 .sidebar a {
   text-decoration: none;
-  color: #004b8d;
+  color: var(--lawn-green);
   font-weight: bold;
   font-size: 1.05rem;
 }
 
 .sidebar a:hover {
-  color: #0077cc;
+  color: var(--lime-green);
 }
 
-/* HEADER */
+/* ----------------------------------
+   HEADER
+---------------------------------- */
 header {
   width: 100%;
   padding: 20px;
-  background-color: #e8ffe8;
-  border-bottom: 4px solid #7fdc7f;
+  background-color: var(--forest-green);
+  border-bottom: 4px solid var(--lime-green);
   display: flex;
   align-items: center;
   gap: 15px;
@@ -63,19 +96,22 @@ header img.logo {
 
 header h1 {
   font-size: 2rem;
-  color: #006400;
+  color: var(--sand-tan);
 }
 
-/* CONTENT AREA */
+/* ----------------------------------
+   MAIN CONTENT
+---------------------------------- */
 .content {
   flex: 1;
   padding: 30px;
-  background-color: #fffef6;
+  background-color: var(--sand-tan-shadow);
+  color: var(--night-blue-shadow);
 }
 
 .content h2 {
   margin-bottom: 15px;
-  color: #2f6f31;
+  color: var(--forest-green);
 }
 
 .content p {
@@ -83,22 +119,26 @@ header h1 {
   line-height: 1.6;
 }
 
-/* BUTTONS */
+/* ----------------------------------
+   BUTTONS
+---------------------------------- */
 .button {
   display: inline-block;
   padding: 12px 20px;
-  background-color: #0077cc;
-  color: white;
+  background-color: var(--night-blue);
+  color: var(--text-light);
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
 }
 
 .button:hover {
-  background-color: #005fa3;
+  background-color: var(--night-blue-shadow);
 }
 
-/* GRID (used in Articles, Videos, Donate pages, etc.) */
+/* ----------------------------------
+   GRID (Articles, Videos, etc.)
+---------------------------------- */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -108,9 +148,18 @@ header h1 {
 
 .card {
   padding: 20px;
-  border: 2px solid #d8d8d8;
+  border: 2px solid var(--forest-green);
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: var(--sand-tan);
+}
+
+.card a {
+  font-weight: bold;
+  color: var(--night-blue-shadow);
+}
+
+.card a:hover {
+  color: var(--forest-green);
 }
 
 .card img {
@@ -118,12 +167,14 @@ header h1 {
   border-radius: 6px;
 }
 
-/* FOOTER */
+/* ----------------------------------
+   FOOTER
+---------------------------------- */
 footer {
   margin-top: 40px;
   padding: 20px;
   text-align: center;
-  background-color: #eef6ff;
-  border-top: 3px solid #98c1ff;
-  color: #004b8d;
+  background-color: var(--night-blue);
+  border-top: 3px solid var(--night-blue-shadow);
+  color: var(--lawn-green);
 }
