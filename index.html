@@ -3,14 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="Seedsofsurvival-style.css">
   <title>Seeds of Survival - Home</title>
+
+  <!-- EaselJS (CreateJS) CDN -->
+  <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
 </head>
 <body>
   <header>
     <img src="logo.png" alt="Seeds of Survival Logo" class="logo">
     <h1>Seeds of Survival</h1>
   </header>
+
+  <!-- Canvas section for EaselJS animation -->
+  <div style="text-align:center; margin: 20px 0;">
+    <canvas id="seedCanvas" width="300" height="200" style="background:#f3f3f3; border-radius:8px;"></canvas>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("seedCanvas");
+    const stage = new createjs.Stage(canvas);
+
+    // Create a simple animated circle (representing a seed)
+    const seed = new createjs.Shape();
+    seed.graphics.beginFill("#6b8e23").drawCircle(0, 0, 20);
+    seed.x = 50;
+    seed.y = 100;
+    stage.addChild(seed);
+
+    // Animation - make it bounce left and right
+    createjs.Ticker.framerate = 60;
+    createjs.Ticker.addEventListener("tick", tick);
+
+    let direction = 1;
+
+    function tick() {
+      seed.x += direction * 2;
+      if (seed.x > 280 || seed.x < 20) direction *= -1; // reverse direction
+
+      stage.update();
+    }
+  </script>
 
   <div class="wrapper">
     <nav class="sidebar">
@@ -20,21 +53,16 @@
         <li><a href="articles.html">Articles</a></li>
         <li><a href="videos.html">Videos</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="campaign.html">Campaign</a></li>
-        <li><a href="donate.html">Donate</a></li>
+        <li><a href="campaigning.html">Campaigning</a></li>
+        <li><a href="fundraisers.html">Fundraisers</a></li>
         <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="volunteer.html">Volunteering</a></li>
+        <li><a href="volunteering.html">Volunteering</a></li>
       </ul>
     </nav>
 
     <main class="content">
       <h2>Welcome to Seeds of Survival</h2>
-      <p>
-        Crop diversity is the foundation of global food security. Yet thousands of traditional and wild crop species are disappearing due to monoculture farming, climate change, habitat loss, and modern industrial agriculture.
-      </p>
-      <p>
-        This website helps you explore the crisis facing endangered crop species and learn how you can take action.
-      </p>
+      <p>Crop diversity is the foundation of global food security...</p>
 
       <h3>Explore the Site</h3>
       <div class="grid">
@@ -48,9 +76,7 @@
         <div class="card"><a href="volunteering.html">Volunteering Opportunities</a></div>
       </div>
 
-      <footer>
-        &copy; 2025 Seeds of Survival. All Rights Reserved.
-      </footer>
+      <footer>&copy; 2025 Seeds of Survival. All Rights Reserved.</footer>
     </main>
   </div>
 </body>
