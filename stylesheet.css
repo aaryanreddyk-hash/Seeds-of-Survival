@@ -1,134 +1,251 @@
-/* ============================
-   Seeds of Survival — External CSS
-   Color Palette Integrated
-   ============================ */
+/* -----------------------------------------------------------
+   FONT IMPORTS
+   Lupines (Headings) + Garamond (Body)
+----------------------------------------------------------- */
 
-/* RESET */
+/* If Lupines is hosted locally, replace the src URL below */
+@font-face {
+  font-family: 'Lupines';
+  src: url('fonts/Lupines.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Garamond — system fallback */
+body {
+  font-family: "Garamond", "Apple Garamond", "EB Garamond", serif;
+}
+
+/* Global heading overrides with Lupines */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lupines", serif;
+}
+
+
+/* -----------------------------------------------------------
+   COLOR PALETTE
+----------------------------------------------------------- */
+
+:root {
+  --green1: #7CFC00;   /* Lawn Green */
+  --green2: #00FF00;   /* Lime */
+  --green3: #32CD32;   /* Lime Green */
+  --green4: #228B22;   /* Forest Green */
+
+  --sand: #e1b382;         /* Sand Tan */
+  --sand-shadow: #c89666;  /* Sand Tan Shadow */
+
+  --blue: #2d545e;         /* Night Blue */
+  --blue-shadow: #12343b;  /* Night Blue Shadow */
+
+  --text-dark: #0c1b12;
+  --text-light: #ffffff;
+}
+
+
+/* -----------------------------------------------------------
+   RESET
+----------------------------------------------------------- */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-/* BODY */
+
+/* -----------------------------------------------------------
+   BODY
+----------------------------------------------------------- */
+
 body {
-  background-color: #e1b382; /* Sand Tan */
-  color: #12343b;            /* Night Blue Shadow */
+  background-color: var(--sand);
+  color: var(--text-dark);
   line-height: 1.6;
+  padding-bottom: 60px;
+  font-family: "Garamond", serif;
 }
 
-/* HEADER */
+
+/* -----------------------------------------------------------
+   HEADER + NAVIGATION
+----------------------------------------------------------- */
+
 header {
-  background-color: #228B22; /* Forest Green */
-  padding: 16px 20px;
-  border-bottom: 6px solid #32CD32; /* Lime Green accent */
+  background: linear-gradient(to right, var(--blue-shadow), var(--blue));
+  padding: 15px 20px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 nav a {
-  color: white;
-  margin-right: 14px;
-  padding: 8px 12px;
+  color: var(--sand);
   text-decoration: none;
   font-weight: bold;
+  padding: 8px 12px;
   border-radius: 6px;
+  transition: 0.25s;
+  font-family: "Garamond", serif;
 }
 
 nav a:hover {
-  background-color: #00FF00; /* Lime */
-  color: #12343b;
+  background-color: var(--green3);
+  color: var(--text-dark);
 }
 
-/* MAIN CONTENT AREA */
+nav a.active {
+  background-color: var(--green4);
+  color: var(--text-light);
+}
+
+
+/* -----------------------------------------------------------
+   MAIN CONTENT
+----------------------------------------------------------- */
+
 main {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 14px;
-  border: 4px solid #c89666; /* Sand Tan Shadow */
-  box-shadow: 0 0 20px rgba(18, 52, 59, 0.15);
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 20px;
+  background: var(--sand-shadow);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(18, 52, 59, 0.25);
 }
 
-/* HEADINGS */
 h1, h2, h3 {
-  color: #2d545e; /* Night Blue */
+  color: var(--blue-shadow);
+  margin-bottom: 12px;
+  font-family: "Lupines", serif;
 }
 
-p, li {
-  color: #12343b; /* Night Blue Shadow */
-}
 
-/* LINKS */
-a {
-  color: #228B22;
-}
-a:hover {
-  color: #7CFC00; /* Lawn Green */
-}
+/* -----------------------------------------------------------
+   BUTTONS
+----------------------------------------------------------- */
 
-/* BUTTONS */
 .button {
   display: inline-block;
-  background-color: #32CD32; /* Lime Green */
-  color: white;
-  padding: 12px 18px;
-  border-radius: 8px;
-  text-decoration: none;
+  padding: 10px 16px;
+  background-color: var(--green4);
+  color: var(--text-light);
   font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-family: "Garamond", serif;
 }
 
 .button:hover {
-  background-color: #00FF00; /* Lime */
-  color: #12343b;
+  background-color: var(--green1);
+  color: var(--text-dark);
 }
 
-/* CARDS (for About, Videos, etc.) */
+
+/* -----------------------------------------------------------
+   LISTS
+----------------------------------------------------------- */
+
+ul, ol {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-family: "Garamond", serif;
+}
+
+li {
+  margin: 6px 0;
+}
+
+
+/* -----------------------------------------------------------
+   CARDS (Articles, Videos, FAQs)
+----------------------------------------------------------- */
+
 .card {
-  background-color: #fff;
-  border: 3px solid #e1b382; /* Sand Tan */
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(18, 52, 59, 0.1);
+  background: var(--sand);
+  border-left: 6px solid var(--green4);
+  padding: 14px;
+  border-radius: 10px;
+  margin: 12px 0;
+  box-shadow: 0 3px 6px rgba(18, 52, 59, 0.2);
+  font-family: "Garamond", serif;
 }
 
-.card:hover {
-  border-color: #7CFC00; /* Lawn Green */
+.card h3 {
+  margin-bottom: 6px;
+  font-family: "Lupines", serif;
 }
 
-/* GRID LAYOUT */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 22px;
-  margin-top: 20px;
-}
-
-/* IFRAME STYLE (video embeds) */
 iframe {
   width: 100%;
-  height: 330px;
+  border: none;
   border-radius: 10px;
-  border: 4px solid #c89666; /* Sand Shadow */
+  height: 300px;
+  margin-top: 8px;
 }
 
-/* FOOTER */
+
+/* -----------------------------------------------------------
+   COMMENT SECTION
+----------------------------------------------------------- */
+
+.comment-box {
+  background: var(--sand);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 6px solid var(--green3);
+  box-shadow: 0 3px 6px rgba(18, 52, 59, 0.2);
+  margin-bottom: 20px;
+}
+
+.comment-box input,
+.comment-box textarea {
+  width: 100%;
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 1rem;
+  margin-top: 4px;
+  font-family: "Garamond", serif;
+}
+
+.comment-box button {
+  margin-top: 10px;
+  font-family: "Garamond", serif;
+}
+
+.comments-display .comment {
+  background: var(--sand-shadow);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border-left: 4px solid var(--green1);
+  font-family: "Garamond", serif;
+}
+
+.comments-display h3 {
+  margin: 0;
+  font-family: "Lupines", serif;
+}
+
+.comments-display small {
+  color: var(--blue-shadow);
+}
+
+
+/* -----------------------------------------------------------
+   FOOTER
+----------------------------------------------------------- */
+
 footer {
-  background-color: #2d545e; /* Night Blue */
-  color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px;
+  background: var(--blue-shadow);
+  color: var(--sand);
   margin-top: 40px;
-  border-top: 6px solid #12343b; /* Night Blue Shadow */
-}
-
-/* MOBILE FRIENDLY */
-@media (max-width: 700px) {
-  nav a {
-    display: block;
-    margin-bottom: 6px;
-  }
-  main {
-    padding: 20px;
-  }
+  position: relative;
+  font-family: "Garamond", serif;
 }
