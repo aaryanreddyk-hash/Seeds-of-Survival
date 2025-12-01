@@ -1,33 +1,7 @@
-/* =======================================================
-   Seeds of Survival – Theme CSS
-   Includes all requested colors:
-   Greens: Lawn Green, Lime, Lime Green, Forest Green
-   Sands: Sand Tan, Sand Tan Shadow
-   Night Blues: Night Blue, Night Blue Shadow
-   ======================================================= */
-
-/* ----------------------------------
-   COLOR VARIABLES
----------------------------------- */
-:root {
-  /* GREEN PALETTE (Topic, Nature, Agriculture) */
-  --lawn-green: #7CFC00;
-  --lime: #00FF00;
-  --lime-green: #32CD32;
-  --forest-green: #228B22;
-
-  /* SAND PALETTE (Wheat, Contrast) */
-  --sand-tan: #e1b382;
-  --sand-tan-shadow: #c89666;
-
-  /* NIGHT BLUE PALETTE (Depth, Serious tone) */
-  --night-blue: #2d545e;
-  --night-blue-shadow: #12343b;
-
-  /* General Text Colors */
-  --text-dark: #1a1a1a;
-  --text-light: #ffffff;
-}
+/* ============================
+   Seeds of Survival — External CSS
+   Color Palette Integrated
+   ============================ */
 
 /* RESET */
 * {
@@ -37,144 +11,124 @@
   font-family: Arial, sans-serif;
 }
 
+/* BODY */
 body {
-  background-color: var(--sand-tan);
-  color: var(--night-blue-shadow);
-}
-
-/* WRAPPER LAYOUT */
-.wrapper {
-  display: flex;
-  min-height: 100vh;
-}
-
-/* ----------------------------------
-   SIDEBAR
----------------------------------- */
-.sidebar {
-  width: 200px;
-  background-color: var(--night-blue);
-  padding: 20px 10px;
-  border-right: 4px solid var(--night-blue-shadow);
-}
-
-.sidebar ul {
-  list-style-type: none;
-}
-
-.sidebar li {
-  margin: 15px 0;
-}
-
-.sidebar a {
-  text-decoration: none;
-  color: var(--lawn-green);
-  font-weight: bold;
-  font-size: 1.05rem;
-}
-
-.sidebar a:hover {
-  color: var(--lime-green);
-}
-
-/* ----------------------------------
-   HEADER
----------------------------------- */
-header {
-  width: 100%;
-  padding: 20px;
-  background-color: var(--forest-green);
-  border-bottom: 4px solid var(--lime-green);
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-header img.logo {
-  height: 50px;
-}
-
-header h1 {
-  font-size: 2rem;
-  color: var(--sand-tan);
-}
-
-/* ----------------------------------
-   MAIN CONTENT
----------------------------------- */
-.content {
-  flex: 1;
-  padding: 30px;
-  background-color: var(--sand-tan-shadow);
-  color: var(--night-blue-shadow);
-}
-
-.content h2 {
-  margin-bottom: 15px;
-  color: var(--forest-green);
-}
-
-.content p {
-  margin-bottom: 15px;
+  background-color: #e1b382; /* Sand Tan */
+  color: #12343b;            /* Night Blue Shadow */
   line-height: 1.6;
 }
 
-/* ----------------------------------
-   BUTTONS
----------------------------------- */
+/* HEADER */
+header {
+  background-color: #228B22; /* Forest Green */
+  padding: 16px 20px;
+  border-bottom: 6px solid #32CD32; /* Lime Green accent */
+}
+
+nav a {
+  color: white;
+  margin-right: 14px;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background-color: #00FF00; /* Lime */
+  color: #12343b;
+}
+
+/* MAIN CONTENT AREA */
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 14px;
+  border: 4px solid #c89666; /* Sand Tan Shadow */
+  box-shadow: 0 0 20px rgba(18, 52, 59, 0.15);
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+  color: #2d545e; /* Night Blue */
+}
+
+p, li {
+  color: #12343b; /* Night Blue Shadow */
+}
+
+/* LINKS */
+a {
+  color: #228B22;
+}
+a:hover {
+  color: #7CFC00; /* Lawn Green */
+}
+
+/* BUTTONS */
 .button {
   display: inline-block;
-  padding: 12px 20px;
-  background-color: var(--night-blue);
-  color: var(--text-light);
-  border-radius: 6px;
+  background-color: #32CD32; /* Lime Green */
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
 }
 
 .button:hover {
-  background-color: var(--night-blue-shadow);
+  background-color: #00FF00; /* Lime */
+  color: #12343b;
 }
 
-/* ----------------------------------
-   GRID (Articles, Videos, etc.)
----------------------------------- */
+/* CARDS (for About, Videos, etc.) */
+.card {
+  background-color: #fff;
+  border: 3px solid #e1b382; /* Sand Tan */
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(18, 52, 59, 0.1);
+}
+
+.card:hover {
+  border-color: #7CFC00; /* Lawn Green */
+}
+
+/* GRID LAYOUT */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 22px;
   margin-top: 20px;
 }
 
-.card {
-  padding: 20px;
-  border: 2px solid var(--forest-green);
-  border-radius: 8px;
-  background-color: var(--sand-tan);
-}
-
-.card a {
-  font-weight: bold;
-  color: var(--night-blue-shadow);
-}
-
-.card a:hover {
-  color: var(--forest-green);
-}
-
-.card img {
+/* IFRAME STYLE (video embeds) */
+iframe {
   width: 100%;
-  border-radius: 6px;
+  height: 330px;
+  border-radius: 10px;
+  border: 4px solid #c89666; /* Sand Shadow */
 }
 
-/* ----------------------------------
-   FOOTER
----------------------------------- */
+/* FOOTER */
 footer {
-  margin-top: 40px;
-  padding: 20px;
+  background-color: #2d545e; /* Night Blue */
+  color: white;
   text-align: center;
-  background-color: var(--night-blue);
-  border-top: 3px solid var(--night-blue-shadow);
-  color: var(--lawn-green);
+  padding: 20px 10px;
+  margin-top: 40px;
+  border-top: 6px solid #12343b; /* Night Blue Shadow */
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 700px) {
+  nav a {
+    display: block;
+    margin-bottom: 6px;
+  }
+  main {
+    padding: 20px;
+  }
 }
