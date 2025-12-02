@@ -1,33 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Lupines:wght@400;700&family=Garamond:wght@400;700&display=swap');
+/* about.css — final version (NO comment-box styles) */
 
-body {
-  background: #ffffff;
-  font-family: Garamond, serif;
-  color: #2d545e;
+/* ---------- FONT IMPORTS ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=EB+Garamond:wght@400;700&display=swap');
+
+/* ---------- COLOR VARIABLES ---------- */
+:root {
+  --lawn: #7CFC00;
+  --lime: #00FF00;
+  --lime-green: #32CD32;
+  --forest: #228B22;
+
+  --sand: #e1b382;
+  --sand-shadow: #c89666;
+
+  --night: #2d545e;
+  --night-shadow: #12343b;
+
+  --text-dark: #0c1b12;
+  --text-light: #ffffff;
 }
 
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "EB Garamond", Garamond, serif;
+  background: linear-gradient(180deg, #fffef6 0%, var(--sand) 100%);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ---------- HEADER + NAV ---------- */
 header {
-  background: #7CFC00;
-  padding: 18px;
+  background: linear-gradient(90deg, var(--night-shadow), var(--night));
+  padding: 16px 20px;
+  border-radius: 6px;
+  margin: 18px auto;
+  max-width: 1100px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 nav a {
-  color: #12343b;
+  color: var(--sand);
   text-decoration: none;
-  margin-right: 15px;
-  font-family: Lupines, serif;
-  font-weight: bold;
-}
-
-h1 {
-  color: #32CD32;
-  font-family: Lupines, serif;
-}
-
-.card {
-  background: #e1b382;
-  border-left: 8px solid #c89666;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 8px 12px;
   border-radius: 8px;
+  font-weight: 700;
+  transition: all .18s ease;
+}
+
+nav a:hover {
+  background: var(--lime-green);
+  color: var(--text-dark);
+  transform: translateY(-2px);
+}
+
+nav a.active {
+  background: var(--forest);
+  color: var(--text-light);
+}
+
+/* ---------- MAIN ---------- */
+main {
+  max-width: 1100px;
+  margin: 18px auto;
+  padding: 22px;
+  background: var(--sand-shadow);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(18, 52, 59, 0.14);
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: "Playfair Display", "Lupines", Georgia, serif;
+  color: var(--night-shadow);
+  margin-bottom: 12px;
+}
+
+/* ---------- CARDS ---------- */
+.card {
+  background: var(--sand);
+  border-left: 6px solid var(--forest);
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 12px rgba(18, 52, 59, 0.12);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin-top: 6px;
+}
+
+/* ---------- GRID LAYOUT ---------- */
+.grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* ---------- LINKS / BUTTONS ---------- */
+a.button, .button {
+  display: inline-block;
+  padding: 10px 14px;
+  background: var(--forest);
+  color: var(--text-light);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: .18s;
+}
+
+a.button:hover, .button:hover {
+  background: var(--lawn);
+  color: var(--text-dark);
+  transform: translateY(-2px);
+}
+
+a {
+  color: var(--forest);
+}
+a:hover {
+  color: var(--lawn);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  margin-top: 18px;
+  padding: 16px;
+  background: linear-gradient(180deg, var(--night), var(--night-shadow));
+  color: var(--sand);
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 840px) {
+  header, main {
+    margin: 12px;
+    padding: 16px;
+  }
 }
