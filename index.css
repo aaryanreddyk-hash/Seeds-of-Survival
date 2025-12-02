@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lupines:wght@400;700&family=Garamond:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: Garamond, serif;
+  background: #f4ffe8;
+  color: #12343b;
+}
+
+header {
+  background: #228B22;
+  padding: 18px;
+}
+
+nav a {
+  color: #e1b382;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Lupines, serif;
+}
+
+main {
+  padding: 40px;
+}
+
+h1, h2, h3 {
+  font-family: Lupines, serif;
+  color: #228B22;
+}
