@@ -1,60 +1,122 @@
-/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* Base */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #f5f5f5;
   color: #333;
 }
 
 /* Header */
 .header {
-  background-color: #2e7d32;
-  color: white;
-  padding: 40px 20px;
   text-align: center;
+  padding: 50px 20px;
+  background-color: #82B0E1;
 }
 
 .header h1 {
+  font-family: 'Lexend', sans-serif;
+  font-size: 44px;
   margin: 0;
-  font-size: 42px;
+  color: #f5f5f5;
 }
 
 .tagline {
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 18px;
+  color: #f5f5f5;
 }
 
-/* Homepage Layout */
+/* Homepage card layout */
 .home-container {
-  max-width: 1000px;
-  margin: 40px auto;
+  max-width: 1100px;
+  margin: 60px auto;
   padding: 0 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  gap: 30px;
 }
 
-/* Homepage Cards */
+/* Homepage cards */
 .home-card {
-  background-color: white;
-  padding: 25px;
+  background-color: #E1B382;
+  border-radius: 14px;
+  padding: 30px;
   text-decoration: none;
   color: #333;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .home-card h2 {
+  font-family: 'Lexend', sans-serif;
   margin-top: 0;
-  color: #2e7d32;
+  margin-bottom: 10px;
 }
 
 .home-card p {
-  line-height: 1.5;
+  margin: 0;
+  line-height: 1.6;
 }
 
 .home-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Subpage layout (already used by About page) */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #82B0E1;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-family: 'Lexend', sans-serif;
+  color: #f5f5f5;
+  margin-top: 0;
+}
+
+.sidebar a {
+  display: block;
+  margin: 12px 0;
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+.content {
+  flex: 1;
+  padding: 40px;
+  max-width: 1000px;
+}
+
+.content h2,
+.content h3 {
+  font-family: 'Lexend', sans-serif;
+  color: #82B0E1;
+}
+
+.content p {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #82B0E1;
+  color: #f5f5f5;
 }
