@@ -12,7 +12,7 @@ body {
 .header {
   text-align: center;
   padding: 50px 20px;
-  background-color: #82B0E1;
+  background-color: #16ac44;
 }
 
 .header h1 {
@@ -73,7 +73,7 @@ body {
 /* Sidebar */
 .sidebar {
   width: 220px;
-  background-color: #82B0E1;
+  background-color: #16ac44;
   padding: 20px;
 }
 
@@ -105,7 +105,7 @@ body {
 .content h2,
 .content h3 {
   font-family: 'Lexend', sans-serif;
-  color: #82B0E1;
+  color: #16ac44;
 }
 
 .content p {
@@ -117,6 +117,6 @@ body {
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #82B0E1;
+  background-color: #16ac44;
   color: #f5f5f5;
 }
